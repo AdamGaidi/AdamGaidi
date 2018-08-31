@@ -1,0 +1,72 @@
+body {
+    background-color: #192231;
+    font-family: sans-serif;
+}
+
+#container {
+    display: flex;
+    align-items: stretch;
+    padding: 5px;
+    flex-direction: row;
+    max-height: 70vh;
+}
+
+#info {
+    flex-grow: 1;
+    flex-basis: auto;
+    border-color: #494E6B;
+    border-style: solid;
+    margin: 5px;
+    flex: 1 1 auto;
+    width: 30%;
+    overflow: auto;
+}
+
+#svgwrap {
+    flex-basis: auto;
+    border-style: solid;
+    border-color: #494E6B;
+    margin: 5px;
+    flex: 3 1 auto;
+    width: 70%;
+}
+
+#expand-doc {
+    display: flex;
+    justify-content: center;
+}
+
+#svgwrap svg {
+    height: 100%;
+    width: 100%;
+}
+
+#doc-button {
+    display: block;
+}
+
+svg:hover {
+    color: white;
+    fill: white;
+    stroke: white;
+}
+
+h1, h2, p {
+    display: flex;
+    justify-content: center;
+    color: #DDD;
+    font-family: 'Raleway', sans-serif;
+}
+
+h1, h2 {
+    letter-spacing: 3px;
+}
+
+p {
+    padding: 3%;
+    letter-spacing: 2px;
+}
+
+#documentation-content {
+    display: none;
+}
