@@ -128,13 +128,107 @@
             </a>
         </div>
         <div id="documentation-content">
-            Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam
-            rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt
-            explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia
-            consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui
-            dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora
-            incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum.
-
+            <div id="subject-flex">
+                <div class="subject">
+                    <h1>CSS-grid & Flexbox</h1>
+                    <p>
+                        Layout har vært en klassisk utfordring for webutviklere siden starten. HTML plasserer elementer
+                        på en vertikal akse, og det fører til at man uten Flexbox og CSS-grid blir avhengige av å ta i bruk
+                        kompliserte løsninger. Med Flexbox og CSS-grid får man en enkel måte å strukturere innholdet på nettsiden sin.
+                        Det er vanlig å bruke CSS-grid og Flexbox sammen; Flexbox som en del av CSS-grid slik at grid brukes
+                        på det overordnede designet, mens flexbox brukes i hvert grid-område for å plassere elementer som hører til der.
+                    </p>
+                    <p>
+                        Flexbox løser problemet ved å tilby utvikleren muligheten til å bruke et 1-dimensjonalt container-objekt
+                        som støtter "wrap-around", både på rad og kolonne. Det egner seg bra når man vil ha et responsivt layout
+                        som tillater at elementer blir satt på siden av hverandre, eller over hverandre på en én-dimensjonal måte
+                    </p>
+                    <p>
+                        CSS-grid løser problemet ved å tilby utvikleren muligheten til å bruke et 2-dimensjonalt container-objekt
+                        for å definere layout på nettsiden sin. CSS-grid er i likhet med Flexbox veldig responsivt, og gjør
+                        fremtidige endringer i layout veldig enkel. CSS-grid egner seg veldig bra når man vil ha mer kontroll
+                        over en sides layout, og har mange elementer som ikke naturlig bare kan "gli inn" i et automatisk oppsett.
+                        CSS-grid tilbyr kjapp eksperimentering med en sides layout gjennom grid-template-area.
+                    </p>
+                    <p>
+                        Jeg valgte å bruke Flexbox alene fordi jeg valgte et side-layout som på det meste har 2 elementer på siden
+                        av hverandre. Det gjør at jeg lett kan bruke flexbox for å få siden til å se ut slik jeg ønsker
+                        at den skal se ut, ved å sette "width" til en viss verdi for 'barna' av 'flexbox-containteren'.
+                        For nettsiden min i dette prosjektet hadde CSS-grid vært mer funksjonalitet enn
+                        nødvendig.
+                    </p>
+                </div>
+                <div class="subject">
+                    <h1>HTML Canvas & SVG</h1>
+                    <p>
+                        HTML canvas er et bibliotek som tillater tegning på et "canvas"-objekt. Man kan gjøre mye med
+                        canvas-biblioteket; feks: å lage spill. Det er mer tungvint å bruke enn SVG fordi canvas-tegninger
+                        ikke et interaktive. Om du vil ha interaktivitet er det noe du må implementere med egne beregninger.
+                        SVG håndterer mye av dette for deg. Canvas er pixelbasert.
+                    </p>
+                    <p>
+                        SVG er vektor-basert. Det vil si at SVG-bilder kan skaleres opp og ned uten å miste noe av kvaliteten, i motsetning
+                        til pixel-baserte format som feks: jpg, png osv. Interaktivitet er også noe SVG har støtte for, og gjør for deg,
+                        det betyr at det ikke er nødvendig med kompliserte implementasjoner av grunnleggende interaktivitet
+                        hvis man bruker SVG. Siden SVG er XML-basert er det bedre tilgjengelighet for søkemotorer, noe som
+                        gir mer informasjon enn et sett med pixler slik man får ved bruk av Canvas.
+                    </p>
+                    <p>
+                        SVG brukes hovedsakelig for enklere former, siden det er XML-objekt vil de fort bli veldig store om de er kompliserte.
+                        SVG brukes hovedsakelig for ikoner, logoer og enkle animasjoner. For mitt prosjekt valgte jeg SVG fordi
+                        det tilbyr mer interaktivitet, er skalerbart og enklere å bruke. I dette prosjektet gjorde jeg alt
+                        SVG-relatert manuelt, men det finnes verktøy for å tegne opp SVG-elementer på en greiere måte.
+                        For mitt prosjekt som verken krevde veldig mange elementer, eller veldig kompliserte elementer var
+                        SVG et naturlig valg.
+                    </p>
+                </div>
+                <div class="subject">
+                    <h1>JQuery</h1>
+                    <p>
+                        Jquery er et populært javascript-bibliotek som forenkler manipulasjon av HTML/DOM/CSS/Ajax ++.
+                        Hovedprinsippet til JQuery er å oppnå mye, med lite kode. Uten JQuery hadde denne oppgaven vært
+                        mye vanskeligere
+                    </p>
+                    <p>
+                        I dette prosjektet har jeg brukt JQuery sin onClick event-listener: .click() og .toggleClass()
+                        for å implementere interaktivitet. Den eneste interaktiviteten jeg ikke har implementert ved hjelp av
+                        JQuery er 'hover' på dokumentasjons-knappen. Det ble gjort i CSS. Ved hjelp av JQuery kunne jeg
+                        enkelt bytte mellom ulike CSS-klasser på SVG-elementene mine, slik at animasjoner/farger endres.
+                    </p>
+                </div>
+                <div class="subject">
+                    <h1>Cross-browser testing</h1>
+                    <p>
+                        En grunnleggende form for testing er å teste nettsiden sin på flere forskjellige nettlesere. Dette
+                        kalles cross-browser testing og må gjøres fordi ulike nettlesere kan vise den samme nettsiden på
+                        forskjellgie måter. Det er heller ikke uvanlige at alle nettlesere ikke støtter den samme funksjonaliteten.
+                        Dette gjelder spesielt for nyere funksjonalitet.
+                    </p>
+                    <p>
+                        Da jeg jobbet med å utvikle nettsiden min brukte jeg hovedsakelig en nyere versjon av Google Chrome (Ver: 68).
+                        Da jeg ble ferdig med det meste av funksjonaliteten min testet jeg nettsiden i Firefox 61, og Safari på iPhone.
+                        Siden jeg brukte SVG (som støttes av nyere versjoner av nettlesere) og har angitt ulike størrelser
+                        på objekter som %, med unntak av noen veldig få, har jeg fått en veldig responsiv nettside.
+                        Hadde jeg fortsatt å jobbe med denne nettsiden ville et naturlig steg videre vært å implementere en
+                        mobil-versjon av siden, siden den nå bruker helt identisk layout på pc og mobil.
+                    </p>
+                </div>
+                <div class="subject">
+                    <h1>Nyttigste kilder</h1>
+                    <p id="header-kilder">
+                        Her er de nyttigste kildene jeg har brukt i dette prosjektet
+                    </p>
+                    <div id="link1"><a href="https://www.w3schools.com/css/default.asp">W3 Schools CSS-tutorial</a></div>
+                    <div id="link2"><a href="https://www.w3schools.com/jquery/default.asp">W3 Schools JQuery-tutorial</a></div>
+                    <div id="link3" ><a href="https://www.w3schools.com/graphics/svg_intro.asp">W3 Schools SVG-tutorial</a></div>
+                    <div id="link4" ><a href="https://css-tricks.com/guides/">CSS-tricks for tutorials om CSS og SVG</a></div>
+                    <div id="link5" ><a href="https://codepen.io/luiscarvalho/pen/hJFrx?editors=1100">Codepen-eksempel av hover-funksjonalitet</a></div>
+                </div>
+                <div class="subject">
+                    <h1>Kodesnutt kilder</h1>
+                    <div id="link6"><a href="https://stackoverflow.com/questions/2155453/jquery-toggle-text/2155582#2155582">jQuery-toggle</a></div>
+                </div>
+            </div>
         </div>
     </div>
 </body>
