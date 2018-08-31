@@ -346,17 +346,21 @@ p {
 
 /*Alternate rectangle animation*/
 .rect-1-alternate {
-    animation: rectangle-4 3s ease infinite;
-}
-
-.rect-2-alternate {
-    animation: rectangle-3 3s ease infinite;
-}
-
-.rect-3-alternate {
+    fill: #DDD;
     animation: rectangle-2 3s ease infinite;
 }
 
-.rect-4-alternate {
+.rect-2-alternate {
+    fill: #DDD;
+    animation: rectangle-4 3s ease infinite;
+}
+
+.rect-3-alternate {
+    fill: #DDD;
     animation: rectangle-1 3s ease infinite;
+}
+
+.rect-4-alternate {
+    fill: #DDD;
+    animation: rectangle-3 3s ease infinite;
 }
